@@ -18,7 +18,7 @@ class UserController {
         req.on("end", async () => {
             try {
                 const bodyJson = JSON.parse(body);
-                // call service registrasi.
+                // call service login.
                 const login = await this.userService.login(bodyJson);
 
                 res.writeHead(201, { "Content-Type": "application/json" });
