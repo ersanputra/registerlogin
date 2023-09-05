@@ -36,6 +36,20 @@ class UserService {
      */
     async login(payload) {
         // 1 validasi email, email terdaftar atau tidak, kalau tidak errorkan user tidak terdaftar.
+        const { email } = payload;
+        const { password } = payload;
+        const user = await this.findByEmail(email);
+
+        if (!user) {
+            throw new Error("Email Tidak Terdaftar!")
+        }
+
+        if (user.password === password ) {
+            return "Login Berhasil"
+        } else {
+            throw new Error("Password Tidak sesuai!")
+        }
+
         // 2 check password, kalau sama sukses kalau beda trow error password tidak sesuai
         // 3 kasih message berhasil login ketika email dan password berhasil. 
     }
