@@ -22,7 +22,7 @@ class UserController {
                 const login = await this.userService.login(bodyJson);
 
                 res.writeHead(201, { "Content-Type": "application/json" });
-                res.end(JSON.stringify({ message: login, status: "success", code: 201 }, null, 2));
+                res.end(JSON.stringify({ message: login, status: "success", code: 200 }, null, 2));
             } catch (error) {
                 res.writeHead(400, { "Content-Type": "application/json" });
                 res.end(JSON.stringify({ message: error.message, status: "fail", code: 400 }, null, 2));
