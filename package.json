@@ -1,0 +1,25 @@
+{
+  "name": "academy",
+  "version": "1.0.0",
+  "description": "login register",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ersanputra/registerlogin.git"
+  },
+  "keywords": [
+    "\"node",
+    "login",
+    "register\""
+  ],
+  "author": "ersancakra@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ersanputra/registerlogin/issues"
+  },
+  "homepage": "https://github.com/ersanputra/registerlogin#readme"
+}
